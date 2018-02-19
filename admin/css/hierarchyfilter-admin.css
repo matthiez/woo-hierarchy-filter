@@ -1,0 +1,45 @@
+/*       ADMIN PAGE       */
+.hierarchyfilter-admin-add-new-input {
+	font-weight: 600;
+}
+.hierarchyfilter-admin-th {
+}
+.hierarchyfilter-admin-add-new-notice {
+	font-size: 11px;
+}
+#hierarchyfilter-admin-main {
+}
+#hierarchyfilter-admin-add-new-reset {
+	padding-top: 3px;
+}
+#hierarchyfilter-admin-database-table {
+	width: 100%;
+}
+#hierarchyfilter-admin-database-table thead {
+	background-color: grey;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+#hierarchyfilter-admin-database-table tbody {
+}
+#hierarchyfilter-admin-database-table tfoot {
+}
+#hierarchyfilter-admin-database-table th {
+	text-align: left;
+}
+#hierarchyfilter-admin-database-table tr {
+}
+table.sortable th:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sorttable_nosort):after { 
+	content: " \25B4\25BE";
+}
+/*       DATABASE       */
+.hierarchyfilter-admin-updated {
+	background: cyan;
+	background-color: #d1d1d1;
+	color: #ffffff;
+}
+/*       META BOX       */
+#hierarchyfilter-meta-box-single select {
+	overflow: auto;
+}
