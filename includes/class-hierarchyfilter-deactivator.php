@@ -20,24 +20,24 @@
  * @subpackage HierarchyFilter/includes
  * @author     Andre Matthies <matthiez@googlemail.com>
  */
+class HierarchyFilter_Deactivator
+{
 
-class HierarchyFilter_Deactivator {
+    /**
+     * Short Description. (use period)
+     *
+     * Long Description.
+     *
+     * @since    1.0.0
+     */
+    public static function deactivate() {
+    }
 
-	/**
-	 * Short Description. (use period)
-	 *
-	 * Long Description.
-	 *
-	 * @since    1.0.0
-	 */
-	public static function deactivate() {
-	}
-	
-/* 	public static function dbDeleteTable() {
- 		global $wpdb;
-		$table_name = $wpdb->prefix . "hierarchyfilter";
-		$wpdb->query( "DROP TABLE IF EXISTS $table_name" ); 
-		delete_option('hierarchyfilter_db_version');
-	} */
-	
+    /* 	public static function dbDeleteTable() {
+             global $wpdb;
+            $table_name = $wpdb->prefix . "hierarchyfilter";
+            $wpdb->query( "DROP TABLE IF EXISTS $table_name" ); 
+            delete_option('hierarchyfilter_db_version');
+        } */
+
 }

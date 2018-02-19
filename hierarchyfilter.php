@@ -25,18 +25,20 @@
  * Domain Path:       /languages
  */
 
-if (!defined('WPINC')) { die; } // If this file is called directly, abort.
+if (!defined('WPINC')) {
+    die;
+} // If this file is called directly, abort.
 
 function activate_HierarchyFilter() {
-	require_once plugin_dir_path(__FILE__) . 'includes/class-hierarchyfilter-activator.php';
-	HierarchyFilter_Activator::activate();
-	HierarchyFilter_Activator::hierarchyfilter_create_table();
-	HierarchyFilter_Activator::hierarchyfilter_default_options();
+    require_once plugin_dir_path(__FILE__) . 'includes/class-hierarchyfilter-activator.php';
+    HierarchyFilter_Activator::activate();
+    HierarchyFilter_Activator::hierarchyfilter_create_table();
+    HierarchyFilter_Activator::hierarchyfilter_default_options();
 }
 
 function deactivate_HierarchyFilter() {
-	require_once plugin_dir_path(__FILE__) . 'includes/class-hierarchyfilter-deactivator.php';
-	HierarchyFilter_Deactivator::deactivate();
+    require_once plugin_dir_path(__FILE__) . 'includes/class-hierarchyfilter-deactivator.php';
+    HierarchyFilter_Deactivator::deactivate();
 }
 
 register_activation_hook(__FILE__, 'activate_HierarchyFilter');
@@ -45,7 +47,8 @@ register_deactivation_hook(__FILE__, 'deactivate_HierarchyFilter');
 require plugin_dir_path(__FILE__) . 'includes/class-hierarchyfilter.php';
 
 function run_HierarchyFilter() {
-	$plugin = new HierarchyFilter();
-	$plugin->run();
+    $plugin = new HierarchyFilter();
+    $plugin->run();
 }
+
 run_HierarchyFilter();
