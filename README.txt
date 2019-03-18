@@ -1,5 +1,5 @@
 === HierarchyFilter ===
-Contributors: arivelox
+Contributors: André Matthies <matthiez@gmail.com>
 Tags: e-commerce, shop, woocommerce, hierarchy, filter, make, model, engine, car, parts, csv, import
 Requires at least: 4.0
 Tested up to: 4.6.1
