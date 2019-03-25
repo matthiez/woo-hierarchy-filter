@@ -27,9 +27,7 @@
                     action: 'hierarchyfilter_load_level_2',
                     hierarchyfilter_level_1: $(this).val()
                 },
-                function (response) {
-                    $shortcode[2].html(response);
-                });
+                response => $shortcode[2].html(response));
         });
         $shortcode[2].change(function () {
             $shortcode[3].prop("disabled", false); // enable the field
@@ -44,7 +42,7 @@
                     $shortcode[3].html(response);
                 });
         });
-        $shortcode[3].change(function () {
+        $shortcode[3].change(() => {
             $shortcode.submit.prop("disabled", false); // enable the field
             $shortcode.submit.show(); // show submit button
         });
@@ -61,9 +59,7 @@
                     action: 'hierarchyfilter_load_level_2',
                     hierarchyfilter_level_1: $(this).val()
                 },
-                function (response) {
-                    $widget[2].html(response);
-                });
+                response => $widget[2].html(response));
         });
         $widget[2].change(function () {
             $widget[3].prop("disabled", false); // enable the field
@@ -78,8 +74,9 @@
                     $widget[3].html(response);
                 });
         });
-        $widget[3].change(function () {
+        $widget[3].change(() => {
             $widget.submit.prop("disabled", false); // enable the field
+
             $widget.submit.show(); // show submit button
         });
     });

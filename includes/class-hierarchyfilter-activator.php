@@ -3,7 +3,7 @@
 /**
  * Fired during plugin activation
  *
- * @link       https://bitbucket.org/arivelox/
+ * @link       https://github.com/matthiez/
  * @since      1.0.0
  *
  * @package    HierarchyFilter
@@ -18,7 +18,7 @@
  * @since      1.0.0
  * @package    HierarchyFilter
  * @subpackage HierarchyFilter/includes
- * @author     Andre Matthies <matthiez@googlemail.com>
+ * @author     André Matthies <matthiez@gmail.com>
  */
 
 register_activation_hook(__FILE__, ['HierarchyFilter_Activator', 'hierarchyfilter_create_table']);
@@ -53,7 +53,7 @@ class HierarchyFilter_Activator
         dbDelta($sql);
         $wpdb->insert($table, ['level_1' => 'Alfa Romeo', 'level_2' => '145 (930)', 'level_3' => '1.9 TD 66 kW']);
         $wpdb->insert($table, ['level_1' => 'Alfa Romeo', 'level_2' => '2600 Spider (106)', 'level_3' => '2.6 107 kW']);
-        $wpdb->insert($table, ['level_1' => 'Alfa Romeo', 'level_2' => '	Montreal', 'level_3' => '2.6(105,64) 143 kW']);
+        $wpdb->insert($table, ['level_1' => 'Alfa Romeo', 'level_2' => 'Montreal', 'level_3' => '2.6(105,64) 143 kW']);
         $wpdb->insert($table, ['level_1' => 'Audi', 'level_2' => '100 (C1)', 'level_3' => '1.6 63 kW']);
         $wpdb->insert($table, ['level_1' => 'BMW', 'level_2' => '1 Cabriolet (E88)', 'level_3' => '118 d 100 kW']);
         $wpdb->insert($table, ['level_1' => 'Bugatti', 'level_2' => 'Veyron EB 16.4', 'level_3' => '8.0 W16 736']);
@@ -66,9 +66,9 @@ class HierarchyFilter_Activator
         add_option('hierarchyfilter_product_tab_thead', 1);
         add_option('hierarchyfilter_text_product_tab', 'HierarchyFilter');
         add_option('hierarchyfilter_text_product_tab_header', 'Assosciated Vehicles');
-        add_option('hierarchyfilter_text_level_1', 'Make');
-        add_option('hierarchyfilter_text_level_2', 'Model');
-        add_option('hierarchyfilter_text_level_3', 'Engine');
+        add_option('hierarchyfilter_text_level_1', 'Level 1');
+        add_option('hierarchyfilter_text_level_2', 'Level 2');
+        add_option('hierarchyfilter_text_level_3', 'Level 3');
         add_option('hierarchyfilter_text_submit', 'Submit');
         add_option('hierarchyfilter_cookie_name', 'hierarchyfilter_customer_vehicle_id');
         add_option('hierarchyfilter_shortcode_labels', 1);

@@ -8,19 +8,19 @@
  * registers the activation and deactivation functions, and defines a function
  * that starts the plugin.
  *
- * @link              https://bitbucket.org/arivelox/wp-hierarchy-filter/
+ * @link              https://github.com/matthiez/wp-hierarchy-filter/
  * @since             1.0.0
  * @package           HierarchyFilter
  *
  * @wordpress-plugin
  * Plugin Name:       HierarchyFilter
- * Plugin URI:        https://bitbucket.org/arivelox/wp-hierarchy-filter/
+ * Plugin URI:        https://github.com/matthiez/wp-hierarchy-filter/
  * Description:       WooCommerce plugin for assosciating certain things like vehicles with products. With Shortcode support.
  * Version:           1.0.0
- * Author:            Andre Matthies
- * Author URI:        https://bitbucket.org/arivelox/
- * License:           GPL-2.0+
- * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
+ * Author:            André Matthies
+ * Author URI:        https://github.com/matthiez/
+ * License:           MIT
+ * License URI:       LICENSE.txt
  * Text Domain:       hierarchyfilter
  * Domain Path:       /languages
  */

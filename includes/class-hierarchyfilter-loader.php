@@ -3,7 +3,7 @@
 /**
  * Register all actions and filters for the plugin
  *
- * @link       https://bitbucket.org/arivelox/
+ * @link       https://github.com/matthiez/
  * @since      1.0.0
  *
  * @package    HierarchyFilter
@@ -19,7 +19,7 @@
  *
  * @package    HierarchyFilter
  * @subpackage HierarchyFilter/includes
- * @author     Andre Matthies <matthiez@googlemail.com>
+ * @author     André Matthies <matthiez@gmail.com>
  */
 class HierarchyFilter_Loader
 {

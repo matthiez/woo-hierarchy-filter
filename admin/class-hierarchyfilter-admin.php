@@ -2,7 +2,7 @@
 /**
  * The admin-specific functionality of the plugin.
  *
- * @link       https://bitbucket.org/arivelox/
+ * @link       https://github.com/matthiez/
  * @since      1.0.0
  *
  * @package    HierarchyFilter
@@ -17,7 +17,7 @@
  *
  * @package    HierarchyFilter
  * @subpackage HierarchyFilter/admin
- * @author     Andre Matthies <matthiez@googlemail.com>
+ * @author     André Matthies <matthiez@gmail.com>
  */
 class HierarchyFilter_Admin
 {
@@ -39,30 +39,18 @@ class HierarchyFilter_Admin
     }
 
     public function hierarchyfilter_add_admin_menu() {
-        $page_title = 'HierarchyFilter Settings';
-        $menu_title = 'HierarchyFilter';
         $capability = 'manage_options';
-        $menu_slug = 'hierarchyfilter_settings';
-        $callback_function = [$this, 'hierarchyfilter_render_settings'];
-        $icon_url = ''; // icon URL
-        $position = ''; // position
-        add_menu_page($page_title, $menu_title, $capability, $menu_slug, $callback_function, $icon_url, $position);
-        $submenu_page_title = 'HierarchyFilter: Settings';
-        $submenu_menu_title = 'Settings';
-        $submenu_menu_slug = 'hierarchyfilter_settings';
-        add_submenu_page($menu_slug, $submenu_page_title, $submenu_menu_title, $capability, $submenu_menu_slug);
-        $submenu_page_title = 'HierarchyFilter: Add new';
-        $submenu_menu_title = 'Add New';
-        $submenu_menu_slug = 'hierarchyfilter_add_new';
-        add_submenu_page($menu_slug, $submenu_page_title, $submenu_menu_title, $capability, $submenu_menu_slug, [$this, 'hierarchyfilter_render_add_new']);
-        $submenu_page_title = 'HierarchyFilter: Database';
-        $submenu_menu_title = 'Database';
-        $submenu_menu_slug = 'hierarchyfilter_database';
-        add_submenu_page($menu_slug, $submenu_page_title, $submenu_menu_title, $capability, $submenu_menu_slug, [$this, 'hierarchyfilter_render_database']);
-        $submenu_page_title = 'HierarchyFilter: Import';
-        $submenu_menu_title = 'Import';
-        $submenu_menu_slug = 'hierarchyfilter_import';
-        add_submenu_page($menu_slug, $submenu_page_title, $submenu_menu_title, $capability, $submenu_menu_slug, [$this, 'hierarchyfilter_render_import']);
+        $menuSlug = 'hierarchyfilter_settings';
+
+        add_menu_page('HierarchyFilter Settings', 'HierarchyFilter', $capability, $menuSlug, [$this, 'hierarchyfilter_render_settings']);
+
+        add_submenu_page($menuSlug, 'HierarchyFilter: Settings', 'Settings', $capability, 'hierarchyfilter_settings');
+
+        add_submenu_page($menuSlug, 'HierarchyFilter: Add new', 'Add New', $capability, 'hierarchyfilter_add_new', [$this, 'hierarchyfilter_render_add_new']);
+
+        add_submenu_page($menuSlug, 'HierarchyFilter: Database', 'Database', $capability, 'hierarchyfilter_database', [$this, 'hierarchyfilter_render_database']);
+
+        add_submenu_page($menuSlug, 'HierarchyFilter: Import', 'Import', $capability, 'hierarchyfilter_import', [$this, 'hierarchyfilter_render_import']);
     }
 
     public function hierarchyfilter_register_fields() {
@@ -138,7 +126,6 @@ class HierarchyFilter_Admin
             'hierarchyfilter_settings', // menu page to display
             'hierarchyfilter_text', // section (optional)
             [
-                'class' => "",
                 'description' => "Alternative string to display as the product data tab text",
                 'id' => "hierarchyfilter_text_product_tab",
                 'name' => "hierarchyfilter_text_product_tab"
@@ -151,7 +138,6 @@ class HierarchyFilter_Admin
             'hierarchyfilter_settings', // menu page to display
             'hierarchyfilter_text', // section (optional)
             [
-                'class' => "",
                 'description' => "Alternative string to display as the product data tab text",
                 'id' => "hierarchyfilter_text_product_tab_header",
                 'name' => "hierarchyfilter_text_product_tab_header"
@@ -164,7 +150,6 @@ class HierarchyFilter_Admin
             'hierarchyfilter_settings', // menu page to display
             'hierarchyfilter_text', // section (optional)
             [
-                'class' => "",
                 'description' => "Alternative string for 'Level 1'",
                 'id' => "hierarchyfilter_text_level_1",
                 'name' => "hierarchyfilter_text_level_1"
@@ -177,7 +162,6 @@ class HierarchyFilter_Admin
             'hierarchyfilter_settings', // menu page to display
             'hierarchyfilter_text', // section (optional)
             [
-                'class' => "",
                 'description' => "Alternative string for 'Level 2'",
                 'id' => "hierarchyfilter_text_level_2",
                 'name' => "hierarchyfilter_text_level_2"
@@ -190,7 +174,6 @@ class HierarchyFilter_Admin
             'hierarchyfilter_settings', // menu page to display
             'hierarchyfilter_text', // section (optional)
             [
-                'class' => "",
                 'description' => "Alternative string for 'Level 3'",
                 'id' => "hierarchyfilter_text_level_3",
                 'name' => "hierarchyfilter_text_level_3"
@@ -203,7 +186,6 @@ class HierarchyFilter_Admin
             'hierarchyfilter_settings', // menu page to display
             'hierarchyfilter_text', // section (optional)
             [
-                'class' => "",
                 'description' => "String for 'Submit' button",
                 'id' => "hierarchyfilter_text_submit",
                 'name' => "hierarchyfilter_text_submit"
@@ -216,7 +198,6 @@ class HierarchyFilter_Admin
             'hierarchyfilter_settings', // menu page to display
             'hierarchyfilter_settings', // section (optional)
             [
-                'class' => "",
                 'description' => "The string to display as the product data tab text",
                 'id' => "hierarchyfilter_select_setting",
                 'name' => "hierarchyfilter_select_setting",

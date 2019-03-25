@@ -6,7 +6,7 @@
  * Loads and defines the internationalization files for this plugin
  * so that it is ready for translation.
  *
- * @link       https://bitbucket.org/arivelox/
+ * @link       https://github.com/matthiez/
  * @since      1.0.0
  *
  * @package    HierarchyFilter
@@ -22,7 +22,7 @@
  * @since      1.0.0
  * @package    HierarchyFilter
  * @subpackage HierarchyFilter/includes
- * @author     Andre Matthies <matthiez@googlemail.com>
+ * @author     André Matthies <matthiez@gmail.com>
  */
 class HierarchyFilter_i18n
 {
